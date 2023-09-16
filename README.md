@@ -59,7 +59,6 @@ index=botsv1 imreallynotbatman.com sourcetype=suricata src_ip=40.80.148.42
 
 **1. One suricata alert highlighted the CVE value associated with the attack attempt. What is the CVE value?**
 To answer this I will click on "signature" under SELECTED FIELDS and take a look at some of the signatures assigned to the logs
-![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/3a3ac32b-2116-4305-8c7d-52ceed31fcf0)
 
 The answer to this question is in the above screenshot but if I needed to narrow down the results some more we could simply add "CVE" to the query
 ```Splunk
