@@ -66,20 +66,26 @@ index=botsv1 imreallynotbatman.com sourcetype=suricata src_ip=40.80.148.42 CVE
 ```
 
 **2. What is the CMS our web server is using?**
-To answer this I really only need to click on "http.url" under "INTERESTING FIELDS" and see where the majority of top values are originating from:![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/7a9f6e17-3c7d-468a-8a42-acde950bea54)
+To answer this I really only need to click on "http.url" under "INTERESTING FIELDS" and see where the majority of top values are originating from:
+
+![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/7a9f6e17-3c7d-468a-8a42-acde950bea54)
 
 **3. What is the web scanner, the attacker used to perform the scanning attempts?**
 To answer this, I'll just be adding "SCAN" to the search query
 ```Splunk
 index=botsv1 imreallynotbatman.com sourcetype=suricata src_ip=40.80.148.42 SCAN
 ```
-The answer should be within the signature of the logs returned![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/a5e8ef5e-f2a9-4865-a330-eb0e1d50ef25)
+The answer should be within the signature of the logs returned
+
+![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/a5e8ef5e-f2a9-4865-a330-eb0e1d50ef25)
 
 **4. What is the IP address of the server imreallynotbatman.com?**
 The answer for this is included in the image provided for the previous question. But the destination IP should be included under the "INTERESTING FIELDS" and by clicking on "dest_ip", then just looking for which destination IP received the majority of the traffic
+
 ![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/30e73fb0-79df-4724-b35a-5a1c1873d9a4)
 
 A screenshot of the questions and answers:
+
 ![image](https://github.com/LGTJackson/Incident-Handling-with-Splunk/assets/47001339/970c3d74-6b44-4986-beed-6a3fea4deaa8)
 
 ___
